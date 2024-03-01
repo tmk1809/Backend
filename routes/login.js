@@ -3,7 +3,7 @@ const { MongoClient } = require("mongodb");
 const UserModel = require("../models/UserModel");
 var router = express.Router();
 
-router.get('/login', async (req, res)=>{
+router.get('/login', (req, res)=>{
     res.render("login");
 })
 

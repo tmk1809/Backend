@@ -13,7 +13,7 @@ var app = express();
 var mongoose = require("mongoose");
 var uri = "mongodb+srv://truongndkgch190486:sH5XgM4uekyEf6xw@cloud.pmznpli.mongodb.net/";
 mongoose
-  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, dbName: 'ATNToys' })
+  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, dbName: 'WebRequirement' })
   .then(console.log("Connect succeed !"))
   .catch((err) => console.log("Connect failed !"));
 mongoose.set("strictQuery", true);
