@@ -14,7 +14,7 @@ var registerRouter = require('./routes/register');
 var app = express();
 
 var mongoose = require("mongoose");
-var uri = "mongodb+srv://truongndkgch190486:sH5XgM4uekyEf6xw@cloud.pmznpli.mongodb.net/";
+var uri = "mongodb+srv://truongndkgch190486:sH5XgM4uekyEf6xw@cloud.pmznpli.mongodb.net/WebRequirement";
 mongoose
   .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, dbName: 'WebRequirement' })
   .then(console.log("Connect succeed !"))
@@ -54,6 +54,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-app.listen(process.env.PORT || 3001)
-
+// app.listen(process.env.PORT || 3001)
+var http = require('http').createServer(app);
+http.listen(8888);
 module.exports = app;

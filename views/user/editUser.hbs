@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Edit User</title>
+</head>
+<body>
+    <h1>Edit Product</h1>
+    <form action="/product/edit/{{user._id}}" method="post">
+     <div class="form-group mt-3">
+            <label class="h5 text text-success" for="">Email</label>
+            <input class="form-control" type="text" name="email" value={{ user.email }} required>
+        </div>
+     <div class="form-group mt-3">
+            <label class="h5 text text-success" for="">Password</label>
+            <input class="form-control" type="password" name="password" value={{ user.password }} required>
+        </div>
+    </form>
+</body>
+</html>
